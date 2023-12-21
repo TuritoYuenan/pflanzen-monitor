@@ -1,0 +1,7 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+Blynk
+BlynkESP32_BT_WF
+DHT sensor library
+LiquidCrystal I2C

@@ -1,0 +1,43 @@
+{
+	"version": 1,
+	"author": "Minh-Triet Nguyen-Ta",
+	"editor": "wokwi",
+	"parts": [
+	  { "type": "board-esp32-c3-devkitm-1", "id": "esp", "top": -9.9, "left": 255.42, "attrs": {} },
+	  { "type": "wokwi-dht22", "id": "dht1", "top": 24, "left": 116.7, "rotate": 270, "attrs": {} },
+	  { "type": "chip-soil-sensor", "id": "chip1", "top": 1.02, "left": 93.01, "attrs": {} },
+	  {
+		"type": "wokwi-lcd1602",
+		"id": "lcd1",
+		"top": 25.6,
+		"left": 380,
+		"attrs": { "pins": "i2c" }
+	  },
+	  {
+		"type": "wokwi-photoresistor-sensor",
+		"id": "ldr1",
+		"top": 118.4,
+		"left": 29.6,
+		"attrs": {}
+	  }
+	],
+	"connections": [
+	  [ "esp:TX", "$serialMonitor:RX", "", [] ],
+	  [ "esp:RX", "$serialMonitor:TX", "", [] ],
+	  [ "chip1:GND", "esp:GND.1", "black", [ "h28.8", "v19.2" ] ],
+	  [ "dht1:GND", "esp:GND.2", "black", [ "h28.8", "v9.6" ] ],
+	  [ "lcd1:GND", "esp:GND.8", "black", [ "h-19.2", "v9.6" ] ],
+	  [ "ldr1:GND", "esp:GND.5", "black", [ "h0" ] ],
+	  [ "esp:GND.3", "dht1:NC", "black", [ "h0" ] ],
+	  [ "chip1:VCC", "esp:3V3.1", "red", [ "h0" ] ],
+	  [ "lcd1:VCC", "esp:3V3.2", "red", [ "h-19.2", "v-86.3", "h-124.8", "v48" ] ],
+	  [ "dht1:VCC", "esp:5V.1", "red", [ "h28.8", "v28.8" ] ],
+	  [ "ldr1:VCC", "esp:5V.2", "red", [ "h0" ] ],
+	  [ "chip1:A0", "esp:2", "green", [ "h28.8", "v19.2" ] ],
+	  [ "ldr1:AO", "esp:1", "green", [ "h28.8", "v-67.9" ] ],
+	  [ "lcd1:SDA", "esp:7", "green", [ "h0" ] ],
+	  [ "lcd1:SCL", "esp:6", "green", [ "h0" ] ],
+	  [ "dht1:SDA", "esp:0", "green", [ "h0" ] ]
+	],
+	"dependencies": {}
+  }

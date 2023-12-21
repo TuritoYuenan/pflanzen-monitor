@@ -1,0 +1,24 @@
+{
+  "name": "soil-sensor",
+  "author": "Minh-Triet Nguyen-Ta",
+  "pins": [
+    "",
+    "",
+    "",
+    "",
+    "A0",
+    "D0",
+    "VCC",
+    "GND"
+  ],
+  "controls": [
+    {
+      "id": "moisture",
+      "label": "Soil Moisture",
+      "type": "range",
+      "min": 1680,
+      "max": 3620,
+      "step": 1
+    }
+  ]
+}
