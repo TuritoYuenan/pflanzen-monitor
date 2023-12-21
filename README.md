@@ -8,6 +8,13 @@ This is an IoT project for setting up an automatic plant monitoring system. The 
 
 > See [HARDWARE.md](HARDWARE.md) for list of hardware components
 
+## Features
+
+- Read temperature, humidity, lightness and soil moisture values
+- Display the values on an LCD screen
+- Send the values to Blynk
+- Power efficient: Sleep after 60 seconds, then wake up 60 seconds later
+
 ## Usage
 
 1. Create a new Blynk device with 4 datastreams for temperature, humidity, lightness and soil moisture.
