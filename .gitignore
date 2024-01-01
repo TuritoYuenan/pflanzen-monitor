@@ -1,2 +1,5 @@
 # Avoid uploading secret file
 secrets.h
+
+# Build directory
+build/
