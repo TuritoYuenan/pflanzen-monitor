@@ -1,5 +1,7 @@
 # PflanzenMonitor
 
+![](images/hardware-layout.png)
+
 This is an IoT project for setting up an automatic plant monitoring system. The project consists of three parts:
 
 - Hardware: ESP32-C3 microcontroller, DHT sensor, Light sensor (LDR), Soil moisture sensor and LCD screen.
